@@ -1,6 +1,6 @@
 package com.estebanzapata.obsidiantools;
 
-import com.estebanzapata.obsidiantools.config.ConfigurationHandler;
+import com.estebanzapata.obsidiantools.handler.ConfigurationHandler;
 import com.estebanzapata.obsidiantools.proxy.IProxy;
 import com.estebanzapata.obsidiantools.reference.Reference;
 
@@ -10,7 +10,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.MOD_VERSION)
+@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.MOD_VERSION, guiFactory = Reference.GUI_FACTORY_CLASS)
 public class ObsidianTools {
 
 
