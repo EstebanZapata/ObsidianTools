@@ -17,6 +17,7 @@ public class ConfigurationHandler
         if (configuration == null)
         {
             configuration = new Configuration(configFile);
+            loadConfiguration();
         }
 
     }
@@ -30,7 +31,7 @@ public class ConfigurationHandler
         }
     }
 
-    public void loadConfiguration()
+    private static void loadConfiguration()
     {
         boolean hardMode = configuration.get(Configuration.CATEGORY_GENERAL, "hardMode", false, Strings.HARD_MODE_CONFIG_COMMENT).getBoolean(false);
 

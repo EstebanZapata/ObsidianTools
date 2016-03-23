@@ -4,6 +4,8 @@ import com.estebanzapata.obsidiantools.handler.ConfigurationHandler;
 import com.estebanzapata.obsidiantools.proxy.IProxy;
 import com.estebanzapata.obsidiantools.reference.Reference;
 
+import com.estebanzapata.obsidiantools.util.LogHelper;
+import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -23,6 +25,8 @@ public class ObsidianTools {
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
+        //bus is deprecated????
+        FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
     }
 
     @Mod.EventHandler
