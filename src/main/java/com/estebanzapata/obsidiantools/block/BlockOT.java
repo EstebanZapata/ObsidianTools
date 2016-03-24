@@ -1,5 +1,6 @@
 package com.estebanzapata.obsidiantools.block;
 
+import com.estebanzapata.obsidiantools.creativetab.CreativeTabOT;
 import com.estebanzapata.obsidiantools.reference.Reference;
 import com.estebanzapata.obsidiantools.reference.Textures;
 import net.minecraft.block.Block;
@@ -11,6 +12,7 @@ public class BlockOT extends Block {
     // Manually specify material
     public BlockOT(Material material) {
         super(material);
+        this.setCreativeTab(CreativeTabOT.OT_TAB);
     }
 
     // Or generic constructor

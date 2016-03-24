@@ -1,5 +1,6 @@
 package com.estebanzapata.obsidiantools.item;
 
+import com.estebanzapata.obsidiantools.creativetab.CreativeTabOT;
 import com.estebanzapata.obsidiantools.reference.Textures;
 
 import net.minecraft.client.renderer.texture.IIconCreator;
@@ -12,6 +13,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class ItemOT extends Item{
     public ItemOT() {
         super();
+        this.setCreativeTab(CreativeTabOT.OT_TAB);
 
     }
 
