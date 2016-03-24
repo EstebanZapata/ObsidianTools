@@ -1,6 +1,7 @@
 package com.estebanzapata.obsidiantools;
 
 import com.estebanzapata.obsidiantools.handler.ConfigurationHandler;
+import com.estebanzapata.obsidiantools.init.ModBlocks;
 import com.estebanzapata.obsidiantools.init.ModItems;
 import com.estebanzapata.obsidiantools.proxy.IProxy;
 import com.estebanzapata.obsidiantools.reference.Reference;
@@ -9,6 +10,7 @@ import com.estebanzapata.obsidiantools.util.LogHelper;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 
+import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -35,6 +37,7 @@ public class ObsidianTools {
         FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
 
         ModItems.init();
+        ModBlocks.init();
     }
 
     @Mod.EventHandler
@@ -42,6 +45,9 @@ public class ObsidianTools {
         // Substring 5 to get rid of "item."
         Minecraft.getMinecraft().getRenderItem().getItemModelMesher()
                 .register(ModItems.onyx, 0, new ModelResourceLocation(ModItems.onyx.getUnlocalizedName().substring(5) ,"inventory"));
+
+        Minecraft.getMinecraft().getRenderItem().getItemModelMesher()
+                .register(Item.getItemFromBlock(ModBlocks.blockOnyx), 0, new ModelResourceLocation(ModBlocks.blockOnyx.getUnlocalizedName().substring(5), "inventory"));
 
     }
 
