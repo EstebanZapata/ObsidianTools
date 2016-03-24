@@ -1,6 +1,7 @@
 package com.estebanzapata.obsidiantools.item;
 
 import com.estebanzapata.obsidiantools.reference.Textures;
+
 import net.minecraft.client.renderer.texture.IIconCreator;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -28,9 +29,4 @@ public class ItemOT extends Item{
     protected String getUnwrappedUnlocalizedName(String unlocalizedName) {
         return unlocalizedName.substring(unlocalizedName.indexOf(".") + 1);
     }
-
-
-
-
-
 }

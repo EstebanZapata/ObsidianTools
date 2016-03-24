@@ -4,10 +4,11 @@ import com.estebanzapata.obsidiantools.handler.ConfigurationHandler;
 import com.estebanzapata.obsidiantools.init.ModItems;
 import com.estebanzapata.obsidiantools.proxy.IProxy;
 import com.estebanzapata.obsidiantools.reference.Reference;
-
 import com.estebanzapata.obsidiantools.util.LogHelper;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
