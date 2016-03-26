@@ -3,6 +3,7 @@ package com.estebanzapata.obsidiantools;
 import com.estebanzapata.obsidiantools.handler.ConfigurationHandler;
 import com.estebanzapata.obsidiantools.init.ModBlocks;
 import com.estebanzapata.obsidiantools.init.ModItems;
+import com.estebanzapata.obsidiantools.init.Recipes;
 import com.estebanzapata.obsidiantools.proxy.IProxy;
 import com.estebanzapata.obsidiantools.reference.Reference;
 import com.estebanzapata.obsidiantools.util.LogHelper;
@@ -47,8 +48,14 @@ public class ObsidianTools {
                 .register(ModItems.onyx, 0, new ModelResourceLocation(ModItems.onyx.getUnlocalizedName().substring(5) ,"inventory"));
 
         Minecraft.getMinecraft().getRenderItem().getItemModelMesher()
+                .register(ModItems.pickaxeOnyx, 0, new ModelResourceLocation(ModItems.pickaxeOnyx.getUnlocalizedName().substring(5) ,"inventory"));
+
+        Minecraft.getMinecraft().getRenderItem().getItemModelMesher()
                 .register(Item.getItemFromBlock(ModBlocks.blockOnyx), 0, new ModelResourceLocation(ModBlocks.blockOnyx.getUnlocalizedName().substring(5), "inventory"));
 
+
+
+        Recipes.init();
     }
 
     @Mod.EventHandler

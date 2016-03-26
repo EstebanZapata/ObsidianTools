@@ -2,19 +2,19 @@ package com.estebanzapata.obsidiantools.item;
 
 import com.estebanzapata.obsidiantools.creativetab.CreativeTabOT;
 import com.estebanzapata.obsidiantools.reference.Textures;
-
-import net.minecraft.client.renderer.texture.IIconCreator;
-import net.minecraft.item.Item;
+import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
 
-// Wrap vanilla item class to add own methods
-public class ItemOT extends Item{
-    public ItemOT() {
-        super();
+public class ItemModPickaxe extends ItemPickaxe{
+
+    public ItemModPickaxe(ToolMaterial material) {
+        super(material);
+    }
+
+    public ItemModPickaxe(ToolMaterial material, String unlocalizedName) {
+        super(material);
+        this.setUnlocalizedName(unlocalizedName);
         this.setCreativeTab(CreativeTabOT.OT_TAB);
-
     }
 
     // Below methods are COPIED AND PASTED to ItemMod*
