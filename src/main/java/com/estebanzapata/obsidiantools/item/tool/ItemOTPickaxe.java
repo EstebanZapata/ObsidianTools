@@ -1,20 +1,21 @@
-package com.estebanzapata.obsidiantools.item;
+package com.estebanzapata.obsidiantools.item.tool;
 
 import com.estebanzapata.obsidiantools.creativetab.CreativeTabOT;
+import com.estebanzapata.obsidiantools.reference.Reference;
 import com.estebanzapata.obsidiantools.reference.Textures;
 import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
 
-public class ItemModPickaxe extends ItemPickaxe{
+public class ItemOTPickaxe extends ItemPickaxe{
 
-    public ItemModPickaxe(ToolMaterial material) {
+    public ItemOTPickaxe(ToolMaterial material) {
         super(material);
     }
 
-    public ItemModPickaxe(ToolMaterial material, String unlocalizedName) {
+    public ItemOTPickaxe(ToolMaterial material, String unlocalizedName) {
         super(material);
         this.setUnlocalizedName(unlocalizedName);
-        this.setCreativeTab(CreativeTabOT.OT_TAB);
+        this.setCreativeTab(Reference.CREATIVE_TAB_OT);
     }
 
     // Below methods are COPIED AND PASTED to ItemMod*
@@ -30,7 +31,7 @@ public class ItemModPickaxe extends ItemPickaxe{
         return String.format("item.%s%s", Textures.RESOURCE_PREFIX, getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
     }
 
-    protected String getUnwrappedUnlocalizedName(String unlocalizedName) {
+    public String getUnwrappedUnlocalizedName(String unlocalizedName) {
         return unlocalizedName.substring(unlocalizedName.indexOf(".") + 1);
     }
 }

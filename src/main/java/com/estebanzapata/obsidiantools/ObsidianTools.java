@@ -1,13 +1,8 @@
 package com.estebanzapata.obsidiantools;
 
 import com.estebanzapata.obsidiantools.handler.ConfigurationHandler;
-import com.estebanzapata.obsidiantools.init.ModItems;
-import com.estebanzapata.obsidiantools.init.Recipes;
 import com.estebanzapata.obsidiantools.proxy.IProxy;
 import com.estebanzapata.obsidiantools.reference.Reference;
-
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
@@ -39,8 +34,6 @@ public class ObsidianTools {
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
         this.iproxy.init(event);
-
-        Recipes.init();
     }
 
     @Mod.EventHandler

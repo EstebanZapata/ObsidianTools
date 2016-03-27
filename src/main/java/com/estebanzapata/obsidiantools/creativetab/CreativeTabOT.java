@@ -5,12 +5,14 @@ import com.estebanzapata.obsidiantools.reference.Reference;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
-public class CreativeTabOT {
+public class CreativeTabOT extends CreativeTabs{
 
-    public static final CreativeTabs OT_TAB = new CreativeTabs(Reference.MOD_ID.toLowerCase()) {
-        @Override
-        public Item getTabIconItem() {
-            return ModItems.onyx;
-        }
-    };
+    public CreativeTabOT (String name) {
+        super(name);
+    }
+
+    @Override
+    public Item getTabIconItem() {
+        return ModItems.onyx;
+    }
 }

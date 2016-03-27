@@ -5,7 +5,11 @@ import com.estebanzapata.obsidiantools.reference.Reference;
 import com.estebanzapata.obsidiantools.reference.Textures;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+
+import java.util.Random;
 
 public class BlockOT extends Block {
     public BlockOT(Material material, float hardness, float resistance) {
@@ -14,20 +18,20 @@ public class BlockOT extends Block {
         this.setHardness(hardness);
         this.setResistance(resistance);
 
-        this.setCreativeTab(CreativeTabOT.OT_TAB);
+        this.setCreativeTab(Reference.CREATIVE_TAB_OT);
+    }
+    
+    @Override
+    public Item getItemDropped(IBlockState state, Random random, int fortune) {
+        Item drop = Item.getItemFromBlock(this);
+
+        return drop;
     }
 
- /*   // Manually specify material
-    public BlockOT(Material material) {
-        super(material);
-        this.setCreativeTab(CreativeTabOT.OT_TAB);
+    @Override
+    public int quantityDropped(Random random) {
+        return 1;
     }
-
-    // Or generic constructor
-    public BlockOT() {
-        this(Material.rock);
-    }
-*/
 
     @Override
     public String getUnlocalizedName() {

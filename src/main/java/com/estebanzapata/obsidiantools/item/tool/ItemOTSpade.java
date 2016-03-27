@@ -1,21 +1,22 @@
-package com.estebanzapata.obsidiantools.item;
+package com.estebanzapata.obsidiantools.item.tool;
 
-import com.estebanzapata.obsidiantools.creativetab.CreativeTabOT;
 import com.estebanzapata.obsidiantools.reference.Reference;
 import com.estebanzapata.obsidiantools.reference.Textures;
-
-import net.minecraft.client.renderer.texture.IIconCreator;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemAxe;
+import net.minecraft.item.ItemSpade;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
 
-// Wrap vanilla item class to add own methods
-public class ItemOT extends Item{
-    public ItemOT() {
-        super();
+public class ItemOTSpade extends ItemSpade {
+    public ItemOTSpade(Item.ToolMaterial material) {
+        super(material);
+    }
+
+    public ItemOTSpade(Item.ToolMaterial material, String unlocalizedName) {
+        super(material);
+
+        this.setUnlocalizedName(unlocalizedName);
         this.setCreativeTab(Reference.CREATIVE_TAB_OT);
-
     }
 
     // Below methods are COPIED AND PASTED to ItemMod*

@@ -1,6 +1,10 @@
 item.obsidiantools:onyx.name=Onyx
 tile.obsidiantools:blockOnyx.name=Block of Onyx
 
-itemGroup.obsidiantools=Obsidian Tools
+itemGroup.ObsidianTools=Obsidian Tools
 
+item.obsidiantools:axeOnyx.name=Onyx Axe
+item.obsidiantools:hoeOnyx.name=Onyx Hoe
 item.obsidiantools:pickaxeOnyx.name=Onyx Pickaxe
+item.obsidiantools:spadeOnyx.name=Onyx Shovel
+item.obsidiantools:swordOnyx.name=Onyx Sword

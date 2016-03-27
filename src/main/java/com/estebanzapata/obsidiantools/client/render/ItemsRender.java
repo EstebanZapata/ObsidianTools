@@ -5,13 +5,15 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 
-/**
- * Created by zapat on 3/27/2016.
- */
 public class ItemsRender {
     public static void init() {
         registerItem(ModItems.onyx);
+
+      //  registerItem(ModItems.axeOnyx);
+        registerItem(ModItems.hoeOnyx);
         registerItem(ModItems.pickaxeOnyx);
+        registerItem(ModItems.spadeOnyx);
+        registerItem(ModItems.swordOnyx);
     }
 
     public static void registerItem(Item item) {

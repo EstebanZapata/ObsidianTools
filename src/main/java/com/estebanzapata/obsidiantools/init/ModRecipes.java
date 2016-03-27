@@ -6,7 +6,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 
-public class Recipes {
+public class ModRecipes {
     public static void init() {
         // 9 onyx = 1 onyx block
         GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.blockOnyx), new ItemStack(ModItems.onyx), new ItemStack(ModItems.onyx),new ItemStack(ModItems.onyx),new ItemStack(ModItems.onyx),new ItemStack(ModItems.onyx),new ItemStack(ModItems.onyx),new ItemStack(ModItems.onyx),new ItemStack(ModItems.onyx),new ItemStack(ModItems.onyx));
