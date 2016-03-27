@@ -1,5 +1,20 @@
 package com.estebanzapata.obsidiantools.proxy;
 
-// CommonProxy has to implement all method in IProxy, unless its abstract, then a child class can implement it
-public abstract class CommonProxy implements IProxy {
+import com.estebanzapata.obsidiantools.init.ModBlocks;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+
+public class CommonProxy implements IProxy {
+    public void preInit(FMLPreInitializationEvent event) {
+        ModBlocks.init();
+    }
+
+    public void init(FMLInitializationEvent event) {
+
+    }
+
+    public void postInit(FMLPostInitializationEvent event) {
+
+    }
 }

@@ -8,6 +8,15 @@ import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemStack;
 
 public class BlockOT extends Block {
+    public BlockOT(String unlocalizedName, Material material, float hardness, float resistance) {
+        super(material);
+        this.setUnlocalizedName(unlocalizedName);
+        this.setHardness(hardness);
+        this.setResistance(resistance);
+
+        this.setCreativeTab(CreativeTabOT.OT_TAB);
+    }
+
 
     // Manually specify material
     public BlockOT(Material material) {
@@ -26,7 +35,8 @@ public class BlockOT extends Block {
         // tile.modid:blockname.name
     }
 
-    protected String getUnwrappedUnlocalizedName(String unlocalizedName) {
+    public String getUnwrappedUnlocalizedName(String unlocalizedName) {
         return unlocalizedName.substring(unlocalizedName.indexOf(".") + 1);
+        // tile.blockname chop off tile.
     }
 }

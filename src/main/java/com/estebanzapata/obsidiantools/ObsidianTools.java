@@ -33,25 +33,28 @@ public class ObsidianTools {
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
+        this.iproxy.preInit(event);
+
+
+
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
         //bus is deprecated????
         FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
 
         ModItems.init();
-        ModBlocks.init();
+        //ModBlocks.init();
     }
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
+        this.iproxy.init(event);
+
         // Substring 5 to get rid of "item."
         Minecraft.getMinecraft().getRenderItem().getItemModelMesher()
                 .register(ModItems.onyx, 0, new ModelResourceLocation(ModItems.onyx.getUnlocalizedName().substring(5) ,"inventory"));
 
         Minecraft.getMinecraft().getRenderItem().getItemModelMesher()
                 .register(ModItems.pickaxeOnyx, 0, new ModelResourceLocation(ModItems.pickaxeOnyx.getUnlocalizedName().substring(5) ,"inventory"));
-
-        Minecraft.getMinecraft().getRenderItem().getItemModelMesher()
-                .register(Item.getItemFromBlock(ModBlocks.blockOnyx), 0, new ModelResourceLocation(ModBlocks.blockOnyx.getUnlocalizedName().substring(5), "inventory"));
 
 
 
@@ -60,6 +63,7 @@ public class ObsidianTools {
 
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event) {
+        this.iproxy.postInit(event);
 
     }
 }

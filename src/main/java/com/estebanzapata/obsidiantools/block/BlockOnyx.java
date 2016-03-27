@@ -6,6 +6,5 @@ public class BlockOnyx extends BlockOT{
     public BlockOnyx() {
         super(Material.rock);
         this.setUnlocalizedName("blockOnyx");
-
     }
 }
