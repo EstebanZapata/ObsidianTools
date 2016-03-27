@@ -8,17 +8,16 @@ import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemStack;
 
 public class BlockOT extends Block {
-    public BlockOT(String unlocalizedName, Material material, float hardness, float resistance) {
+    public BlockOT(Material material, float hardness, float resistance) {
         super(material);
-        this.setUnlocalizedName(unlocalizedName);
+
         this.setHardness(hardness);
         this.setResistance(resistance);
 
         this.setCreativeTab(CreativeTabOT.OT_TAB);
     }
 
-
-    // Manually specify material
+ /*   // Manually specify material
     public BlockOT(Material material) {
         super(material);
         this.setCreativeTab(CreativeTabOT.OT_TAB);
@@ -28,6 +27,7 @@ public class BlockOT extends Block {
     public BlockOT() {
         this(Material.rock);
     }
+*/
 
     @Override
     public String getUnlocalizedName() {

@@ -1,6 +1,7 @@
 package com.estebanzapata.obsidiantools.proxy;
 
-import com.estebanzapata.obsidiantools.client.render.RenderBlocks;
+import com.estebanzapata.obsidiantools.client.render.BlocksRender;
+import com.estebanzapata.obsidiantools.client.render.ItemsRender;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -12,7 +13,8 @@ public class ClientProxy extends CommonProxy {
 
     public void init(FMLInitializationEvent event) {
         super.init(event);
-        RenderBlocks.init();
+        BlocksRender.init();
+        ItemsRender.init();
     }
 
     public void postInit(FMLPostInitializationEvent event) {

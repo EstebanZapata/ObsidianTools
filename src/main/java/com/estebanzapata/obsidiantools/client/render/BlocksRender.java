@@ -7,7 +7,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 
-public class RenderBlocks {
+public class BlocksRender {
     public static void init() {
         registerBlock(ModBlocks.blockOnyx);
     }
