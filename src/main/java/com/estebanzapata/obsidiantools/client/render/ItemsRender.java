@@ -9,11 +9,17 @@ public class ItemsRender {
     public static void init() {
         registerItem(ModItems.onyx);
 
-      //  registerItem(ModItems.axeOnyx);
+        registerItem(ModItems.axeOnyx);
         registerItem(ModItems.hoeOnyx);
         registerItem(ModItems.pickaxeOnyx);
         registerItem(ModItems.spadeOnyx);
         registerItem(ModItems.swordOnyx);
+
+        registerItem(ModItems.axeObsidian);
+        registerItem(ModItems.hoeObsidian);
+        registerItem(ModItems.pickaxeObsidian);
+        registerItem(ModItems.spadeObsidian);
+        registerItem(ModItems.swordObsidian);
     }
 
     public static void registerItem(Item item) {

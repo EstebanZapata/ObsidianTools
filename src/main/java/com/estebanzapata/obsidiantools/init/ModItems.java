@@ -11,25 +11,42 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 @GameRegistry.ObjectHolder(Reference.MOD_ID)
 public final class ModItems {
     // Name, harvest level, durability, speed, damage, enchantability
-    public static Item.ToolMaterial OBSIDIAN = EnumHelper.addToolMaterial("OBSIDIAN", 4, 500, 10.0F, 4.0F, 15);
+//    Wood Tool: 59
+//    Stone Tool: 131
+//    Iron Tool: 250
+//    Diamond Tool: 1561
+//    Gold Tool: 32
+    public static Item.ToolMaterial OBSIDIAN = EnumHelper.addToolMaterial("OBSIDIAN", 4, 750, 10.0F, 4.0F, 15);
     public static Item.ToolMaterial ONYX = EnumHelper.addToolMaterial("ONYX", 4, 2000, 12.0F, 5.0F, 22);
 
     public static final ItemOT onyx = new ItemOnyx();
 
-    // TODO: Make them (or just axe) extend ItemTool
-   // public static final ItemOTAxe axeOnyx = new ItemOTAxe(ONYX, "axeOnyx");
+    public static final ItemOTAxe axeOnyx = new ItemOTAxe(ONYX, "axeOnyx");
     public static final ItemOTHoe hoeOnyx = new ItemOTHoe(ONYX, "hoeOnyx");
     public static final ItemOTPickaxe pickaxeOnyx = new ItemOTPickaxe(ONYX, "pickaxeOnyx");
     public static final ItemOTSpade spadeOnyx = new ItemOTSpade(ONYX, "spadeOnyx");
     public static final ItemOTSword swordOnyx = new ItemOTSword(ONYX, "swordOnyx");
 
+    public static final ItemOTAxe axeObsidian = new ItemOTAxe(OBSIDIAN, "axeObsidian");
+    public static final ItemOTHoe hoeObsidian = new ItemOTHoe(OBSIDIAN, "hoeObsidian");
+    public static final ItemOTPickaxe pickaxeObsidian = new ItemOTPickaxe(OBSIDIAN, "pickaxeObsidian");
+    public static final ItemOTSpade spadeObsidian = new ItemOTSpade(OBSIDIAN, "spadeObsidian");
+    public static final ItemOTSword swordObsidian = new ItemOTSword(OBSIDIAN, "swordObsidian");
+
     public static void init() {
         GameRegistry.registerItem(onyx, "onyx");
 
-    //    GameRegistry.registerItem(axeOnyx, "axeOnyx");
+        GameRegistry.registerItem(axeOnyx, "axeOnyx");
         GameRegistry.registerItem(hoeOnyx, "hoeOnyx");
         GameRegistry.registerItem(pickaxeOnyx, "pickaxeOnyx");
         GameRegistry.registerItem(spadeOnyx, "spadeOnyx");
         GameRegistry.registerItem(swordOnyx, "swordOnyx");
+
+        GameRegistry.registerItem(axeObsidian, "axeObsidian");
+        GameRegistry.registerItem(hoeObsidian, "hoeObsidian");
+        GameRegistry.registerItem(pickaxeObsidian, "pickaxeObsidian");
+        GameRegistry.registerItem(spadeObsidian, "spadeObsidian");
+        GameRegistry.registerItem(swordObsidian, "swordObsidian");
+
     }
 }
