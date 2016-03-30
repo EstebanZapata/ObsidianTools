@@ -1,5 +1,6 @@
 package com.estebanzapata.obsidiantools.item.armor;
 
+import com.estebanzapata.obsidiantools.init.ModItems;
 import com.estebanzapata.obsidiantools.reference.Reference;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.EntityEquipmentSlot;
@@ -9,10 +10,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.common.Mod;
 
-/**
- * Created by zapat on 3/29/2016.
- */
 public class ItemOTArmor extends ItemArmor{
     public ItemOTArmor(String unlocalizedName, ArmorMaterial material, int renderIndex, EntityEquipmentSlot equipmentSlot) {
         super(material, renderIndex, equipmentSlot);
@@ -22,8 +21,11 @@ public class ItemOTArmor extends ItemArmor{
     }
 
     @Override
-    public void onArmorTick(World world) {
-
+    public void onArmorTick(World world, EntityPlayer player, ItemStack armor) {
+        if (isWearingFullSet(player, ModItems.helmetObsidian, ModItems.chestplateObsidian, ModItems.leggingsObsidian, ModItems.bootsObsidian)) {
+            // Fire resistance potion
+            castPotionEffect(player, Potion.getPotionById(12), 1);
+        }
     }
 
     private boolean isWearingFullSet(EntityPlayer player, Item helmet, Item chestplate, Item leggings, Item boots) {
