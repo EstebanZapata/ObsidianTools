@@ -1,9 +1,7 @@
 package com.estebanzapata.obsidiantools.item.tool;
 
 import com.estebanzapata.obsidiantools.reference.Reference;
-import com.estebanzapata.obsidiantools.reference.Textures;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemAxe;
 import net.minecraft.item.ItemSpade;
 import net.minecraft.item.ItemStack;
 
@@ -23,13 +21,13 @@ public class ItemOTSpade extends ItemSpade {
 
     @Override
     public String getUnlocalizedName() {
-        return String.format("item.%s%s", Textures.RESOURCE_PREFIX, getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
+        return String.format("item.%s%s", Reference.RESOURCE_PREFIX, getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
         //item.ObsidianTools:onyx.name
     }
 
     @Override
     public String getUnlocalizedName(ItemStack itemStack) {
-        return String.format("item.%s%s", Textures.RESOURCE_PREFIX, getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
+        return String.format("item.%s%s", Reference.RESOURCE_PREFIX, getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
     }
 
     public String getUnwrappedUnlocalizedName(String unlocalizedName) {

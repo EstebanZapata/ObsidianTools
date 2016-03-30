@@ -1,13 +1,10 @@
 package com.estebanzapata.obsidiantools.block;
 
-import com.estebanzapata.obsidiantools.creativetab.CreativeTabOT;
 import com.estebanzapata.obsidiantools.reference.Reference;
-import com.estebanzapata.obsidiantools.reference.Textures;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 
 import java.util.Random;
 
@@ -35,7 +32,7 @@ public class BlockOT extends Block {
 
     @Override
     public String getUnlocalizedName() {
-        return String.format("tile.%s%s", Textures.RESOURCE_PREFIX, getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
+        return String.format("tile.%s%s", Reference.RESOURCE_PREFIX, getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
         // tile.modid:blockname.name
     }
 

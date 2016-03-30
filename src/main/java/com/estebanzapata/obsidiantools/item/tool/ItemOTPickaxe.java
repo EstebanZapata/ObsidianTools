@@ -1,8 +1,6 @@
 package com.estebanzapata.obsidiantools.item.tool;
 
-import com.estebanzapata.obsidiantools.creativetab.CreativeTabOT;
 import com.estebanzapata.obsidiantools.reference.Reference;
-import com.estebanzapata.obsidiantools.reference.Textures;
 import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
 
@@ -22,13 +20,13 @@ public class ItemOTPickaxe extends ItemPickaxe{
 
     @Override
     public String getUnlocalizedName() {
-        return String.format("item.%s%s", Textures.RESOURCE_PREFIX, getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
+        return String.format("item.%s%s", Reference.RESOURCE_PREFIX, getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
         //item.ObsidianTools:onyx.name
     }
 
     @Override
     public String getUnlocalizedName(ItemStack itemStack) {
-        return String.format("item.%s%s", Textures.RESOURCE_PREFIX, getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
+        return String.format("item.%s%s", Reference.RESOURCE_PREFIX, getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
     }
 
     public String getUnwrappedUnlocalizedName(String unlocalizedName) {

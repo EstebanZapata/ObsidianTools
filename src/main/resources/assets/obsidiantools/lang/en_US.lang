@@ -8,3 +8,8 @@ item.obsidiantools:hoeOnyx.name=Onyx Hoe
 item.obsidiantools:pickaxeOnyx.name=Onyx Pickaxe
 item.obsidiantools:spadeOnyx.name=Onyx Shovel
 item.obsidiantools:swordOnyx.name=Onyx Sword
+
+item.obsidiantools:helmetObsidian.name=Obsidian Helmet
+item.obsidiantools:chestplateObsidian.name=Obsidian Chestplate
+item.obsidiantools:leggingsObsidian.name=Obsidian Leggings
+item.obsidiantools:bootsObsidian.name=Obsidian Boots

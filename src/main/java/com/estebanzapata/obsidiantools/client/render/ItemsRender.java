@@ -20,6 +20,11 @@ public class ItemsRender {
         registerItem(ModItems.pickaxeObsidian);
         registerItem(ModItems.spadeObsidian);
         registerItem(ModItems.swordObsidian);
+
+        registerItem(ModItems.helmetObsidian);
+        registerItem(ModItems.chestplateObsidian);
+        registerItem(ModItems.leggingsObsidian);
+        registerItem(ModItems.bootsObsidian);
     }
 
     public static void registerItem(Item item) {

@@ -1,19 +1,18 @@
 package com.estebanzapata.obsidiantools.item.tool;
 
 import com.estebanzapata.obsidiantools.reference.Reference;
-import com.estebanzapata.obsidiantools.reference.Textures;
 import com.google.common.collect.Sets;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemAxe;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemTool;
 
 import java.util.Set;
 
+// Disgusting workaround. Basically copied vanilla axe code and modified it so no ArrayIndexOutOfBounds error
 public class ItemOTAxe extends ItemTool {
     private static final Set<Block> EFFECTIVE_ON = Sets.newHashSet(new Block[] {Blocks.planks, Blocks.bookshelf, Blocks.log, Blocks.log2, Blocks.chest, Blocks.pumpkin, Blocks.lit_pumpkin, Blocks.melon_block, Blocks.ladder, Blocks.wooden_button, Blocks.wooden_pressure_plate});
     private static final float[] ATTACK_DAMAGES = new float[] {6.0F, 8.0F, 8.0F, 8.0F, 6.0F};
@@ -49,13 +48,13 @@ public class ItemOTAxe extends ItemTool {
 
     @Override
     public String getUnlocalizedName() {
-        return String.format("item.%s%s", Textures.RESOURCE_PREFIX, getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
+        return String.format("item.%s%s", Reference.RESOURCE_PREFIX, getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
         //item.ObsidianTools:onyx.name
     }
 
     @Override
     public String getUnlocalizedName(ItemStack itemStack) {
-        return String.format("item.%s%s", Textures.RESOURCE_PREFIX, getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
+        return String.format("item.%s%s", Reference.RESOURCE_PREFIX, getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
     }
 
     public String getUnwrappedUnlocalizedName(String unlocalizedName) {

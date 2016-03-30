@@ -1,14 +1,9 @@
 package com.estebanzapata.obsidiantools.item;
 
-import com.estebanzapata.obsidiantools.creativetab.CreativeTabOT;
 import com.estebanzapata.obsidiantools.reference.Reference;
-import com.estebanzapata.obsidiantools.reference.Textures;
 
-import net.minecraft.client.renderer.texture.IIconCreator;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
 
 // Wrap vanilla item class to add own methods
 public class ItemOT extends Item{
@@ -22,13 +17,13 @@ public class ItemOT extends Item{
 
     @Override
     public String getUnlocalizedName() {
-        return String.format("item.%s%s", Textures.RESOURCE_PREFIX, getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
+        return String.format("item.%s%s", Reference.RESOURCE_PREFIX, getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
         //item.ObsidianTools:onyx.name
     }
 
     @Override
     public String getUnlocalizedName(ItemStack itemStack) {
-        return String.format("item.%s%s", Textures.RESOURCE_PREFIX, getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
+        return String.format("item.%s%s", Reference.RESOURCE_PREFIX, getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
     }
 
     public String getUnwrappedUnlocalizedName(String unlocalizedName) {
