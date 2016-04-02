@@ -1,6 +1,5 @@
 package com.estebanzapata.obsidiantools.init;
 
-import com.estebanzapata.obsidiantools.item.armor.ItemOTArmor;
 import com.estebanzapata.obsidiantools.item.armor.ItemObsidianArmor;
 import com.estebanzapata.obsidiantools.item.armor.ItemOnyxArmor;
 import com.estebanzapata.obsidiantools.item.tool.*;

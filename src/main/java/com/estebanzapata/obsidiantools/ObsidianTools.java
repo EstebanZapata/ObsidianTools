@@ -23,12 +23,8 @@ public class ObsidianTools {
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-        this.iproxy.preInit(event);
-
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
-        //bus is deprecated????
-        FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
-
+        this.iproxy.preInit(event);
     }
 
     @Mod.EventHandler

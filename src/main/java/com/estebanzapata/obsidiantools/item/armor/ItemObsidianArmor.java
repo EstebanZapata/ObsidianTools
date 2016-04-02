@@ -1,7 +1,6 @@
 package com.estebanzapata.obsidiantools.item.armor;
 
 import com.estebanzapata.obsidiantools.init.ModItems;
-import com.estebanzapata.obsidiantools.reference.Reference;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;

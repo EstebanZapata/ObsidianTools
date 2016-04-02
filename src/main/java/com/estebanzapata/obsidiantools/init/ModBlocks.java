@@ -4,7 +4,6 @@ package com.estebanzapata.obsidiantools.init;
 import com.estebanzapata.obsidiantools.block.BlockOT;
 import com.estebanzapata.obsidiantools.block.BlockOnyx;
 import com.estebanzapata.obsidiantools.reference.Reference;
-import net.minecraft.block.material.Material;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @GameRegistry.ObjectHolder(Reference.MOD_ID)

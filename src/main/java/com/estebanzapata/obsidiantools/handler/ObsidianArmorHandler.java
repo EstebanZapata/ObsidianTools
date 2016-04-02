@@ -2,11 +2,8 @@ package com.estebanzapata.obsidiantools.handler;
 
 import com.estebanzapata.obsidiantools.init.ModItems;
 import com.estebanzapata.obsidiantools.item.armor.ItemOTArmor;
-import com.estebanzapata.obsidiantools.item.armor.ItemObsidianArmor;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.util.DamageSource;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
-import net.minecraftforge.event.entity.living.LivingEvent.LivingUpdateEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class ObsidianArmorHandler {

@@ -20,9 +20,8 @@ public class BlockOT extends Block {
     
     @Override
     public Item getItemDropped(IBlockState state, Random random, int fortune) {
-        Item drop = Item.getItemFromBlock(this);
 
-        return drop;
+        return Item.getItemFromBlock(this);
     }
 
     @Override

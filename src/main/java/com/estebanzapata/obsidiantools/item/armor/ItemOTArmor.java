@@ -1,6 +1,5 @@
 package com.estebanzapata.obsidiantools.item.armor;
 
-import com.estebanzapata.obsidiantools.init.ModItems;
 import com.estebanzapata.obsidiantools.reference.Reference;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.EntityEquipmentSlot;
@@ -9,8 +8,6 @@ import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
-import net.minecraft.world.World;
-import net.minecraftforge.fml.common.Mod;
 
 // TODO: Figure out a way to remove fire when fallen into lava with obsidian armor set on
 public class ItemOTArmor extends ItemArmor{
@@ -29,12 +26,7 @@ public class ItemOTArmor extends ItemArmor{
         boolean isWearingLeggings = player.inventory.armorItemInSlot(1) != null && player.inventory.armorItemInSlot(1).getItem() == leggings;
         boolean isWearingBoots = player.inventory.armorItemInSlot(0) != null && player.inventory.armorItemInSlot(0).getItem() == boots;
 
-        if(isWearingHelmet && isWearingChestplate && isWearingLeggings && isWearingBoots) {
-            return true;
-        }
-        else {
-            return false;
-        }
+        return isWearingHelmet && isWearingChestplate && isWearingLeggings && isWearingBoots;
 
     }
 
