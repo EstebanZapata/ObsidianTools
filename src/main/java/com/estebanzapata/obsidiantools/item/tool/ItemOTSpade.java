@@ -22,7 +22,7 @@ public class ItemOTSpade extends ItemSpade {
     @Override
     public String getUnlocalizedName() {
         return String.format("item.%s%s", Reference.RESOURCE_PREFIX, getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
-        //item.ObsidianTools:onyx.name
+        //item.ObsidianTools:gemOnyx.name
     }
 
     @Override

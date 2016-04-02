@@ -7,8 +7,9 @@ import net.minecraft.item.ItemStack;
 
 // Wrap vanilla item class to add own methods
 public class ItemOT extends Item{
-    public ItemOT() {
+    public ItemOT(String unlocalizedName) {
         super();
+        this.setUnlocalizedName(unlocalizedName);
         this.setCreativeTab(Reference.CREATIVE_TAB_OT);
 
     }
@@ -18,7 +19,7 @@ public class ItemOT extends Item{
     @Override
     public String getUnlocalizedName() {
         return String.format("item.%s%s", Reference.RESOURCE_PREFIX, getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
-        //item.ObsidianTools:onyx.name
+        //item.ObsidianTools:gemOnyx.name
     }
 
     @Override

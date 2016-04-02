@@ -1,4 +1,4 @@
-item.obsidiantools:onyx.name=Onyx
+item.obsidiantools:gemOnyx.name=Onyx
 tile.obsidiantools:blockOnyx.name=Block of Onyx
 
 itemGroup.ObsidianTools=Obsidian Tools

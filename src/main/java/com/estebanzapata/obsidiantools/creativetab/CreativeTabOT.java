@@ -1,7 +1,6 @@
 package com.estebanzapata.obsidiantools.creativetab;
 
 import com.estebanzapata.obsidiantools.init.ModItems;
-import com.estebanzapata.obsidiantools.reference.Reference;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
@@ -13,6 +12,6 @@ public class CreativeTabOT extends CreativeTabs{
 
     @Override
     public Item getTabIconItem() {
-        return ModItems.onyx;
+        return ModItems.gemOnyx;
     }
 }

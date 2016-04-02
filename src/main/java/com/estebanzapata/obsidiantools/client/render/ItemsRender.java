@@ -7,7 +7,7 @@ import net.minecraft.item.Item;
 
 public class ItemsRender {
     public static void init() {
-        registerItem(ModItems.onyx);
+        registerItem(ModItems.gemOnyx);
 
         registerItem(ModItems.axeOnyx);
         registerItem(ModItems.hoeOnyx);
