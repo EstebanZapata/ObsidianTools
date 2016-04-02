@@ -25,6 +25,11 @@ public class ItemsRender {
         registerItem(ModItems.chestplateObsidian);
         registerItem(ModItems.leggingsObsidian);
         registerItem(ModItems.bootsObsidian);
+
+        registerItem(ModItems.helmetOnyx);
+        registerItem(ModItems.chestplateOnyx);
+        registerItem(ModItems.leggingsOnyx);
+        registerItem(ModItems.bootsOnyx);
     }
 
     public static void registerItem(Item item) {

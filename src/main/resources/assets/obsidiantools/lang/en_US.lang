@@ -13,3 +13,8 @@ item.obsidiantools:helmetObsidian.name=Obsidian Helmet
 item.obsidiantools:chestplateObsidian.name=Obsidian Chestplate
 item.obsidiantools:leggingsObsidian.name=Obsidian Leggings
 item.obsidiantools:bootsObsidian.name=Obsidian Boots
+
+item.obsidiantools:helmetOnyx.name=Onyx Helmet
+item.obsidiantools:chestplateOnyx.name=Onyx Chestplate
+item.obsidiantools:leggingsOnyx.name=Onyx Leggings
+item.obsidiantools:bootsOnyx.name=Onyx Boots

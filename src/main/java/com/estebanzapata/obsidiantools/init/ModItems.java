@@ -2,6 +2,7 @@ package com.estebanzapata.obsidiantools.init;
 
 import com.estebanzapata.obsidiantools.item.armor.ItemOTArmor;
 import com.estebanzapata.obsidiantools.item.armor.ItemObsidianArmor;
+import com.estebanzapata.obsidiantools.item.armor.ItemOnyxArmor;
 import com.estebanzapata.obsidiantools.item.tool.*;
 import com.estebanzapata.obsidiantools.item.ItemOT;
 import com.estebanzapata.obsidiantools.item.ItemOnyx;
@@ -26,6 +27,8 @@ public final class ModItems {
 
     public static ItemArmor.ArmorMaterial OBSIDIAN_ARMOR = EnumHelper.addArmorMaterial("OBSIDIAN_ARMOR",
             Reference.RESOURCE_PREFIX + "obsidian", 5, new int[] {2, 6, 5 ,2}, 9, SoundEvents.item_armor_equip_generic);
+    public static ItemArmor.ArmorMaterial ONYX_ARMOR = EnumHelper.addArmorMaterial("ONYX_ARMOR",
+            Reference.RESOURCE_PREFIX + "onyx", 38, new int[] {3, 8, 6, 3}, 15, SoundEvents.item_armor_equip_diamond);
 
 
     public static final ItemOT gemOnyx = new ItemOnyx("gemOnyx");
@@ -34,6 +37,12 @@ public final class ModItems {
     public static final ItemObsidianArmor chestplateObsidian = new ItemObsidianArmor("chestplateObsidian", OBSIDIAN_ARMOR, 1, EntityEquipmentSlot.CHEST);
     public static final ItemObsidianArmor leggingsObsidian = new ItemObsidianArmor("leggingsObsidian", OBSIDIAN_ARMOR, 2, EntityEquipmentSlot.LEGS);
     public static final ItemObsidianArmor bootsObsidian = new ItemObsidianArmor("bootsObsidian", OBSIDIAN_ARMOR, 1, EntityEquipmentSlot.FEET);
+
+    public static final ItemOnyxArmor helmetOnyx = new ItemOnyxArmor("helmetOnyx", ONYX_ARMOR, 1, EntityEquipmentSlot.HEAD);
+    public static final ItemOnyxArmor chestplateOnyx = new ItemOnyxArmor("chestplateOnyx", ONYX_ARMOR, 1, EntityEquipmentSlot.CHEST);
+    public static final ItemOnyxArmor leggingsOnyx = new ItemOnyxArmor("leggingsOnyx", ONYX_ARMOR, 2, EntityEquipmentSlot.LEGS);
+    public static final ItemOnyxArmor bootsOnyx = new ItemOnyxArmor("bootsOnyx", ONYX_ARMOR, 1, EntityEquipmentSlot.FEET);
+
 
     public static final ItemOTAxe axeOnyx = new ItemOTAxe(ONYX_TOOL, "axeOnyx");
     public static final ItemOTHoe hoeOnyx = new ItemOTHoe(ONYX_TOOL, "hoeOnyx");
@@ -54,6 +63,11 @@ public final class ModItems {
         GameRegistry.registerItem(chestplateObsidian, "chestplateObsidian");
         GameRegistry.registerItem(leggingsObsidian, "leggingsObsidian");
         GameRegistry.registerItem(bootsObsidian, "bootsObsidian");
+
+        GameRegistry.registerItem(helmetOnyx, "helmetOnyx");
+        GameRegistry.registerItem(chestplateOnyx, "chestplateOnyx");
+        GameRegistry.registerItem(leggingsOnyx, "leggingsOnyx");
+        GameRegistry.registerItem(bootsOnyx, "bootsOnyx");
 
         GameRegistry.registerItem(axeOnyx, "axeOnyx");
         GameRegistry.registerItem(hoeOnyx, "hoeOnyx");
