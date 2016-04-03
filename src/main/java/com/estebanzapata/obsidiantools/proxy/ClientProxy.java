@@ -20,7 +20,7 @@ public class ClientProxy extends CommonProxy {
         RenderingRegistry.registerEntityRenderingHandler(EntityGolemObsidian.class, new IRenderFactory<EntityGolemObsidian>() {
             @Override
             public Render<? super EntityGolemObsidian> createRenderFor(RenderManager manager) {
-                return new RenderGolemObsidian(manager);
+                return new RenderGolemObsidian(manager, new ModelGolemObsidian(), 0.5f);
             }
         });
     }

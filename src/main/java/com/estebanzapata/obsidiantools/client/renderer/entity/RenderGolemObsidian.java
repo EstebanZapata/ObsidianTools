@@ -14,8 +14,8 @@ public class RenderGolemObsidian extends RenderLiving<EntityGolemObsidian> {
 
     private static final ResourceLocation golemObsidianTextures = new ResourceLocation(Reference.RESOURCE_PREFIX + "textures/entity/golemObsidian.png");
 
-    public RenderGolemObsidian(RenderManager rendermanagerIn) {
-        super(rendermanagerIn, new ModelGolemObsidian(), 0.5F);
+    public RenderGolemObsidian(RenderManager rendermanagerIn, ModelBase modelIn, float shadowSizeIn) {
+        super(rendermanagerIn, modelIn, shadowSizeIn);
     }
 
     @Override
