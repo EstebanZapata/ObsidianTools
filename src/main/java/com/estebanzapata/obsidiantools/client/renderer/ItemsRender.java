@@ -1,4 +1,4 @@
-package com.estebanzapata.obsidiantools.client.render;
+package com.estebanzapata.obsidiantools.client.renderer;
 
 import com.estebanzapata.obsidiantools.init.ModItems;
 import net.minecraft.client.Minecraft;
