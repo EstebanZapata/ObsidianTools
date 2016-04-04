@@ -3,6 +3,7 @@ package com.estebanzapata.obsidiantools.handler;
 import com.estebanzapata.obsidiantools.init.ModItems;
 import com.estebanzapata.obsidiantools.item.armor.ItemOTArmor;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.util.DamageSource;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
@@ -11,14 +12,14 @@ public class ObsidianArmorHandler {
     @SubscribeEvent
     public void onAttackEvent(LivingAttackEvent event) {
 
-        if (event.entityLiving instanceof EntityPlayer) {
-            EntityPlayer player = (EntityPlayer) event.entityLiving;
+        if (event.getEntityLiving() instanceof EntityPlayer) {
+            EntityPlayer player = (EntityPlayer) event.getEntityLiving();
 
-            if (ItemOTArmor.isWearingFullSet(player, ModItems.helmetObsidian, ModItems.chestplateObsidian, ModItems.leggingsObsidian, ModItems.bootsObsidian)) {
+            if (ItemOTArmor.isWearingFullSet(player, ModItems.helmetObsidian, ModItems.chestplateObsidian, ModItems.leggingsObsidian, ModItems.bootsObsidian) && event.getSource() != DamageSource.starve) {
 
 
 
-                if(event.ammount >= 25) {
+                if(event.getAmount() >= 25) {
                     event.setCanceled(true);
 
                     player.inventory.armorItemInSlot(3).damageItem(player.inventory.armorItemInSlot(3).getMaxDamage() * 2 / 3, player);

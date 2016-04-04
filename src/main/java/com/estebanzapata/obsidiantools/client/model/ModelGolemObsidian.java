@@ -94,7 +94,7 @@ public class ModelGolemObsidian extends ModelBase
      * Used for easily adding entity-dependent animations. The second and third float params here are the same second
      * and third as in the setRotationAngles method.
      */
-    /*public void setLivingAnimations(EntityLivingBase entitylivingbaseIn, float p_78086_2_, float p_78086_3_, float partialTickTime)
+    public void setLivingAnimations(EntityLivingBase entitylivingbaseIn, float p_78086_2_, float p_78086_3_, float partialTickTime)
     {
         EntityGolemObsidian entityGolemObsidian = (EntityGolemObsidian) entitylivingbaseIn;
         int i = entityGolemObsidian.getAttackTimer();
@@ -104,25 +104,18 @@ public class ModelGolemObsidian extends ModelBase
             this.golemObsidianRightArm.rotateAngleX = -2.0F + 1.5F * this.func_78172_a((float)i - partialTickTime, 10.0F);
             this.golemObsidianLeftArm.rotateAngleX = -2.0F + 1.5F * this.func_78172_a((float)i - partialTickTime, 10.0F);
         }
+
         else
         {
-            int j = entityGolemObsidian.getHoldRoseTick();
-
-            if (j > 0)
-            {
-                this.golemObsidianRightArm.rotateAngleX = -0.8F + 0.025F * this.func_78172_a((float)j, 70.0F);
-                this.golemObsidianLeftArm.rotateAngleX = 0.0F;
-            }
-            else
-            {
-                this.golemObsidianRightArm.rotateAngleX = (-0.2F + 1.5F * this.func_78172_a(p_78086_2_, 13.0F)) * p_78086_3_;
-                this.golemObsidianLeftArm.rotateAngleX = (-0.2F - 1.5F * this.func_78172_a(p_78086_2_, 13.0F)) * p_78086_3_;
-            }
+            this.golemObsidianRightArm.rotateAngleX = (-0.2F + 1.5F * this.func_78172_a(p_78086_2_, 13.0F)) * p_78086_3_;
+            this.golemObsidianLeftArm.rotateAngleX = (-0.2F - 1.5F * this.func_78172_a(p_78086_2_, 13.0F)) * p_78086_3_;
         }
-    }*/
+    }
 
     private float func_78172_a(float p_78172_1_, float p_78172_2_)
     {
         return (Math.abs(p_78172_1_ % p_78172_2_ - p_78172_2_ * 0.5F) - p_78172_2_ * 0.25F) / (p_78172_2_ * 0.25F);
     }
+
+
 }

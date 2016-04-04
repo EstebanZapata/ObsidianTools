@@ -56,6 +56,7 @@ public final class ModItems {
     public static final ItemOTSword swordObsidian = new ItemOTSword(OBSIDIAN_TOOL, "swordObsidian");
 
     public static void init() {
+
         GameRegistry.registerItem(gemOnyx, "gemOnyx");
 
         GameRegistry.registerItem(helmetObsidian, "helmetObsidian");
