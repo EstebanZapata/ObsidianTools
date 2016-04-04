@@ -162,19 +162,16 @@ public class EntityGolemObsidian extends EntityMob {
     public boolean getCanSpawnHere() {
         BlockPos blockPos = new BlockPos(this.posX, this.getEntityBoundingBox().minY, this.posZ);
 
-        System.out.println("Trying to spawn at " + blockPos.getX() + " " + blockPos.getY() + " " + blockPos.getZ());
 
 
-        if (blockPos.getY() >= this.worldObj.getSeaLevel() || this.worldObj.canSeeSky(blockPos)) {
+
+        if (blockPos.getY() > 30 || this.worldObj.canSeeSky(blockPos)) {
             return false;
         }
         else {
-            boolean canSpawn = super.getCanSpawnHere();
-
-            if(canSpawn) {
-                System.out.println("Spawned at " + blockPos.getX() + " " + blockPos.getY() + " " + blockPos.getZ());
-            }
-            return canSpawn;
+            return super.getCanSpawnHere();
         }
+
+
     }
 }

@@ -12,7 +12,9 @@ public class TestSpawnHandler {
     @SubscribeEvent
     public void test(LivingSpawnEvent event) {
         if (event.getEntityLiving() instanceof EntityGolemObsidian) {
-            System.out.println("Spawned at " + event.getX() + " " + event.getY() + " " + event.getZ());
+            if (event.getY() <= 30) {
+                System.out.println("Trying to spawn at " + event.getX() + " " + event.getY() + " " + event.getZ());
+            }
         }
     }
 }
