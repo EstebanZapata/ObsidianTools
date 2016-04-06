@@ -22,11 +22,13 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class EntityGolemObsidian extends EntityMob {
 
     private int attackTimer;
+    private boolean isLavaForm = true;
 
     public EntityGolemObsidian(World worldIn) {
         super(worldIn);
 
         this.setSize(1.4F, 2.7F);
+       // this.setSize(0.5F, 0.5F);
         this.isImmuneToFire = true;
 
     }
@@ -47,8 +49,9 @@ public class EntityGolemObsidian extends EntityMob {
 
         this.tasks.addTask(0, new EntityAISwimming(this));
         this.tasks.addTask(1, new EntityAIAttackMelee(this, 1.0D, true));
-        this.tasks.addTask(2, new EntityAIWander(this, 0.8D));
-        this.tasks.addTask(3, new EntityAILookIdle(this));
+        this.tasks.addTask(3, new EntityAIMoveTowardsTarget(this, 0.9D, 32.0F));
+        this.tasks.addTask(4, new EntityAIWander(this, 0.8D));
+        this.tasks.addTask(5, new EntityAILookIdle(this));
 
         this.targetTasks.addTask(0, new EntityAINearestAttackableTarget(this, EntityPlayer.class, true));
         this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, false, new Class[0]));
@@ -163,8 +166,6 @@ public class EntityGolemObsidian extends EntityMob {
         BlockPos blockPos = new BlockPos(this.posX, this.getEntityBoundingBox().minY, this.posZ);
 
 
-
-
         if (blockPos.getY() > 30 || this.worldObj.canSeeSky(blockPos)) {
             return false;
         }
@@ -174,4 +175,10 @@ public class EntityGolemObsidian extends EntityMob {
 
 
     }
+
+    public boolean isLavaForm() {
+        return this.isLavaForm;
+    }
+
+
 }

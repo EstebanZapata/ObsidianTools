@@ -1,6 +1,7 @@
 package com.estebanzapata.obsidiantools.proxy;
 
 import com.estebanzapata.obsidiantools.handler.ConfigurationHandler;
+import com.estebanzapata.obsidiantools.handler.GolemObsidianDropHandler;
 import com.estebanzapata.obsidiantools.handler.ObsidianArmorHandler;
 import com.estebanzapata.obsidiantools.handler.TestSpawnHandler;
 import com.estebanzapata.obsidiantools.init.ModBlocks;
@@ -28,6 +29,6 @@ public class CommonProxy implements IProxy {
     public void postInit(FMLPostInitializationEvent event) {
         MinecraftForge.EVENT_BUS.register(new ObsidianArmorHandler());
         MinecraftForge.EVENT_BUS.register(new TestSpawnHandler());
-
+        MinecraftForge.EVENT_BUS.register(new GolemObsidianDropHandler());
     }
 }

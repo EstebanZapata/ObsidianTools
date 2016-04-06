@@ -8,6 +8,7 @@ import net.minecraft.init.Biomes;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
+import org.apache.commons.lang3.ArrayUtils;
 
 import static net.minecraft.world.biome.BiomeGenBase.explorationBiomesList;
 
@@ -17,8 +18,16 @@ public class ModEntities {
 
         registerModEntityWithEgg(EntityGolemObsidian.class, "golemObsidian", 0x3F5505, 0x4E6414);
 
-        // TODO: Use forge biome dictionary
-        EntityRegistry.addSpawn(EntityGolemObsidian.class, 100, 1, 1, EnumCreatureType.MONSTER, explorationBiomesList.toArray(new BiomeGenBase[explorationBiomesList.size()]));
+        BiomeGenBase[] biomes = new BiomeGenBase[0];
+
+        for (BiomeDictionary.Type type: BiomeDictionary.Type.values()) {
+            biomes = ArrayUtils.addAll(biomes, BiomeDictionary.getBiomesForType(type));
+        }
+        //EntityRegistry.addSpawn(EntityGolemObsidian.class, 100, 1, 1, EnumCreatureType.MONSTER, explorationBiomesList.toArray(new BiomeGenBase[explorationBiomesList.size()]));
+        EntityRegistry.addSpawn(EntityGolemObsidian.class, 100, 1, 1, EnumCreatureType.MONSTER, biomes);
+
+        biomes = null;
+
     }
 
     public static void registerModEntityWithEgg(Class entityClass, String entityName, int eggColor, int eggSpotsColor) {
