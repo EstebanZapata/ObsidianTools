@@ -1,5 +1,6 @@
 package com.estebanzapata.obsidiantools.entity;
 
+import net.minecraft.client.Minecraft;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
@@ -64,6 +65,11 @@ public class EntityGolemObsidian extends EntityMob {
         if (this.attackTimer > 0) {
             --this.attackTimer;
         }
+
+        if (this.isInWater()) {
+            isLavaForm = false;
+        }
+
     }
 
     // Copied and pasted method from superclass but pasted in lines from EntityIronGolem.attackEntityAsMob()
@@ -176,9 +182,24 @@ public class EntityGolemObsidian extends EntityMob {
 
     }
 
-    public boolean isLavaForm() {
-        return this.isLavaForm;
+
+    @Override
+    public boolean attackEntityFrom(DamageSource source, float amount) {
+        if (this.isLavaForm) {
+            return false;
+        }
+        else if (source.getSourceOfDamage() instanceof EntityPlayer) {
+            //if (!source.getSourceOfDamage().getCurrentEquippedItem())
+        }
+
+        else {
+            return super.attackEntityFrom(source, amount);
+        }
     }
 
+    public boolean isLavaForm() {
+        return this.isLavaForm;
 
+
+    }
 }

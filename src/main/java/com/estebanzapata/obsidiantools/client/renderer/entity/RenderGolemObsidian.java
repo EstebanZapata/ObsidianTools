@@ -12,26 +12,44 @@ import net.minecraft.util.ResourceLocation;
 
 public class RenderGolemObsidian extends RenderLiving<EntityGolemObsidian> {
 
-   // private static final ResourceLocation[] golemLavaTextures =  new ResourceLocation[16];
+    private static final ResourceLocation[] golemLavaTextures =  new ResourceLocation[16];
     private static final ResourceLocation golemObsidianTexture = new ResourceLocation(Reference.RESOURCE_PREFIX + "textures/entity/golemObsidian.png");
-   // private static final ResourceLocation golemLavaTexture = new ResourceLocation(Reference.RESOURCE_PREFIX + "textures/entity/golemLava.png")
+    private static final ResourceLocation golemLavaTexture = new ResourceLocation(Reference.RESOURCE_PREFIX + "textures/entity/golemLava.png");
+
+    private int textureIndex = 15;
+
 
     public RenderGolemObsidian(RenderManager rendermanagerIn, ModelBase modelIn, float shadowSizeIn) {
         super(rendermanagerIn, modelIn, shadowSizeIn);
-        //this.initLavaTextures();
+        this.initLavaTextures();
     }
 
-    /*protected void initLavaTextures() {
+    protected void initLavaTextures() {
         for(int i = 0; i < golemLavaTextures.length; i++) {
             golemLavaTextures[i] = new ResourceLocation(Reference.RESOURCE_PREFIX + "textures/entity/golemLava" + i + ".png");
         }
-    }*/
+    }
 
 
     @Override
     protected ResourceLocation getEntityTexture(EntityGolemObsidian entity) {
-        return golemObsidianTexture;
+        if(entity.isLavaForm()) {
+
+            if (entity.ticksExisted % 3 == 0) {
+                this.textureIndex--;
+            }
+
+            if (textureIndex == -1) {
+                textureIndex = 15;
+            }
+
+            return golemLavaTextures[textureIndex];
+        }
+        else {
+            return golemObsidianTexture;
+        }
     }
+
 
 
     protected void rotateCorpse(EntityGolemObsidian bat, float p_77043_2_, float p_77043_3_, float partialTicks)
